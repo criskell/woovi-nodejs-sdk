@@ -1,9 +1,9 @@
 import type { SubAccount } from '../commonTypes';
 
 export type GetPayload = {
-	id: string;
+  id: string;
 };
 
 export type GetResponse = {
-	SubAccount: SubAccount;
+  SubAccount: SubAccount;
 };

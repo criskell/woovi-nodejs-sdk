@@ -1,14 +1,14 @@
 import type {
-	PreRegistrationPayload,
-	PreRegistrationUser,
+  PreRegistrationPayload,
+  PreRegistrationUser,
 } from '../commonTypes';
 
 export type CreatePayload = {
-	preRegistration: PreRegistrationPayload & { website?: string };
-	user: PreRegistrationUser;
+  preRegistration: PreRegistrationPayload & { website?: string };
+  user: PreRegistrationUser;
 };
 
 export type CreateResponse = {
-	preRegistration: PreRegistrationPayload & { website?: string };
-	user: PreRegistrationUser;
+  preRegistration: PreRegistrationPayload & { website?: string };
+  user: PreRegistrationUser;
 };

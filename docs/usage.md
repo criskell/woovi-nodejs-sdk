@@ -15,19 +15,21 @@ This way, the SDK will be installed.
 The SDK entry point is a `createClient` for the service.
 
 CommonJs:
+
 ```js
-const WooviSdk = require("@woovi/node-sdk");
+const WooviSdk = require('@woovi/node-sdk');
 
 // To initialize
-const woovi = WooviSdk.createClient({appId: "your-app-id"});
+const woovi = WooviSdk.createClient({ appId: 'your-app-id' });
 ```
 
 Ts/Module:
+
 ```ts
-import { createClient } from "@woovi/;node-sdk"
+import { createClient } from '@woovi/node-sdk';
 
 // To initialize
-const woovi = createClient({appId: "your-app-id"})
+const woovi = createClient({ appId: 'your-app-id' });
 ```
 
 The `createClient` method creates a new client from an application ID obtained from the [OpenPix website](https://app.openpix.com.br/home/applications/tab/list).
@@ -37,8 +39,9 @@ The `createClient` method creates a new client from an application ID obtained f
 A client has _resources_ (e.g. customers, billings, subscriptions, etc.) that can be accessed through `createClient`.
 
 ```js
-woovi.customer
+woovi.customer;
 ```
+
 Each resource will have a set of methods that can be executed to perform operations:
 
 ```js
@@ -59,7 +62,7 @@ In each resource, there is a convention in the names of operations, which, for t
 In the case of listing operations, an object with an optional paging key is normally accepted.
 
 ```js
-woovi.refund.list({ skip: 0, limit: 20 })
+woovi.refund.list({ skip: 0, limit: 20 });
 ```
 
 ### Output format
@@ -97,9 +100,9 @@ The following features are available in the generated `Client`:
 The webhook method has a special feature called handle, great for using to validate resources directly in your api. See below how to use it:
 
 ```js
-import { createClient } from "@woovi/node-sdk";
+import { createClient } from '@woovi/node-sdk';
 
-const woovi = createClient({ appId: "your-app-id" });
+const woovi = createClient({ appId: 'your-app-id' });
 
 const handler = woovi.webhook.handler({
   onChargeCompleted: async (payload) => {},
@@ -112,6 +115,7 @@ export const POST = handler.POST;
 Post receives your request.
 
 ## Dependencies
+
 The project does not use external dependencies for its operation.
 
 Take a look at [the resources.](./resources.md.md)

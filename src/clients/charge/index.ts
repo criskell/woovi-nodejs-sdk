@@ -6,11 +6,11 @@ import getQrCode from './get-qr-code';
 import list from './list';
 
 export default (restClient: RestClientApi) => {
-	return {
-		get: get(restClient),
-		create: create(restClient),
-		delete: _delete(restClient),
-		getQrCode: getQrCode,
-		list: list(restClient),
-	};
+  return {
+    get: get(restClient),
+    create: create(restClient),
+    delete: _delete(restClient),
+    getQrCode: getQrCode,
+    list: list(restClient),
+  };
 };

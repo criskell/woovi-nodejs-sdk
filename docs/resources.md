@@ -11,7 +11,7 @@ Call the `get` method on the accounts resource by passing an accountId:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/account/paths/~1api~1v1~1account~1%7BaccountId%7D/get).
 
 ```js
-const response = await woovi.account.get({accountId: "some-id"});
+const response = await woovi.account.get({ accountId: 'some-id' });
 ```
 
 ### Get a list of accounts
@@ -21,7 +21,7 @@ Get the accounts using the `list` method in the accounts resource:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/account/paths/~1api~1v1~1account~1/get).
 
 ```js
-const response = await woovi.account.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.account.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Make a withdrawal (withdraw)
@@ -31,8 +31,12 @@ Withdraw from a account using the `withdraw` method in the account feature.
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/account/paths/~1api~1v1~1account~1%7BaccountId%7D~1withdraw/post).
 
 ```js
-const response = await woovi.account.withdraw({accountId: "string", value: 200});
+const response = await woovi.account.withdraw({
+  accountId: 'string',
+  value: 200,
+});
 ```
+
 ## Cashback loyalty
 
 Call the `cashbackFidelity` method on your API client to get the cashback loyalty feature.
@@ -46,7 +50,7 @@ Call the `get` method on the cashback loyalty feature by passing a taxID:
 [Endpoint documentation for more details](https://developers.woovi.com/api#tag/cashback-fidelity/paths/~1api~1v1~1cashback-fidelity~1balance~1%7BtaxID%7D/get).
 
 ```js
-const response = await woovi.cashbackFidelity.get({ taxID: "some-tax-id"});
+const response = await woovi.cashbackFidelity.get({ taxID: 'some-tax-id' });
 ```
 
 ### Create (or get) a cashback loyalty for a customer
@@ -57,8 +61,8 @@ Create the resource by calling the `create` method on the cashback loyalty resou
 
 ```js
 const response = await woovi.cashbackFidelity.create({
-  "value": 100,
-  "taxID": 11111111111
+  value: 100,
+  taxID: 11111111111,
 });
 ```
 
@@ -75,7 +79,7 @@ Call the `get` method on the charges resource by passing an id:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/charge/paths/~1api~1v1~1charge~1%7Bid%7D/delete).
 
 ```js
-const response = await woovi.charge.get({id: "some-id"});
+const response = await woovi.charge.get({ id: 'some-id' });
 ```
 
 ### Get a list of charges
@@ -85,7 +89,7 @@ Get the charges using the `list` method in the charges resource:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/charge/paths/~1api~1v1~1charge~1%7Bid%7D/get).
 
 ```js
-const response = await woovi.charge.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.charge.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a charge
@@ -94,7 +98,7 @@ Create a charge using the `create` method in the charges resource:
 
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/charge/paths/~1api~1v1~1charge/get).
 
-```js 
+````js
 const response = await woovi.charge.create({
   "correlationID": "9134e286-6f71-427a-bf00-241681624587",
   "value": 100,
@@ -128,7 +132,7 @@ Get the qr code of a charge using the `getQrCode` method in the charges resource
 
 ```js
 const response = await woovi.charge.getQrCode({size: "768"});
-```
+````
 
 ### Delete a charge
 
@@ -137,9 +141,8 @@ Delete a charge using the `delete` method in the charges feature:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/charge/paths/~1api~1v1~1charge~1%7Bid%7D/delete).
 
 ```js
-const response = await woovi.charge.delete({id: "some-id"});
+const response = await woovi.charge.delete({ id: 'some-id' });
 ```
-
 
 ## Billing Exit
 
@@ -154,7 +157,7 @@ Get the chargebacks using the `list` method in the chargeback feature:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/charge-refund/paths/~1api~1v1~1charge~1%7Bid%7D~1refund/get).
 
 ```js
-const response = await woovi.chargeRefund.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.chargeRefund.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a charge
@@ -163,12 +166,12 @@ Create a billing statement using the `create` method in the billing statement fe
 
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/charge/paths/~1api~1v1~1charge/get).
 
-```js 
+```js
 const response = await woovi.chargeRefund.create({
-  "id": "algum-id",
-  "correlationID": "a273e72c-9547-4c75-a213-3b0a2735b8d5",
-  "value": 100,
-  "comment": "Comentário do reembolso"
+  id: 'algum-id',
+  correlationID: 'a273e72c-9547-4c75-a213-3b0a2735b8d5',
+  value: 100,
+  comment: 'Comentário do reembolso',
 });
 ```
 
@@ -185,7 +188,7 @@ Call the `get` method on the customers resource passing an id:
 [Endpoint documentation for more details](https://developers.woovi.com/api#tag/customer/paths/~1api~1v1~1customer~1%7Bid%7D/get).
 
 ```js
-const response = await woovi.customer.get({id: "some-id"});
+const response = await woovi.customer.get({ id: 'some-id' });
 ```
 
 ### Get a list of customers
@@ -195,7 +198,7 @@ Get the customers using the `list` method in the customers resource:
 [Endpoint documentation for more details](https://developers.woovi.com/api#tag/customer/paths/~1api~1v1~1customer/get).
 
 ```js
-const response = await woovi.customer.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.customer.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a client
@@ -203,23 +206,24 @@ const response = await woovi.customer.list({limit: 10, skip: 0}); //the paginati
 Create a client using the `create` method in the clients resource:
 
 [Endpoint documentation for more details](https://developers.woovi.com/api#tag/customer/paths/~1api~1v1~1customer/post).
-```js 
+
+```js
 const response = await woovi.customer.create({
-  "name": "Dan",
-  "taxID": "31324227036",
-  "email": "email0@example.com",
-  "phone": "5511999999999",
-  "correlationID": "9134e286-6f71-427a-bf00-241681624586",
-  "address": {
-    "zipcode": "30421322",
-    "street": "Street",
-    "number": "100",
-    "neighborhood": "Neighborhood",
-    "city": "Belo Horizonte",
-    "state": "MG",
-    "complement": "APTO",
-    "country": "BR"
-  }
+  name: 'Dan',
+  taxID: '31324227036',
+  email: 'email0@example.com',
+  phone: '5511999999999',
+  correlationID: '9134e286-6f71-427a-bf00-241681624586',
+  address: {
+    zipcode: '30421322',
+    street: 'Street',
+    number: '100',
+    neighborhood: 'Neighborhood',
+    city: 'Belo Horizonte',
+    state: 'MG',
+    complement: 'APTO',
+    country: 'BR',
+  },
 });
 ```
 
@@ -229,72 +233,75 @@ Update a client using the `update` method in the clients resource.
 
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/customer/paths/~1api~1v1~1customer/post).
 
-```js 
+```js
 const response = await woovi.customer.update({
-  "correlationID": "some id",
-  "name": "Dan",
-  "email": "email0@example.com",
-  "phone": "5511999999999",
-  "address": {
-    "zipcode": "30421322",
-    "street": "Street",
-    "number": "100",
-    "neighborhood": "Neighborhood",
-    "city": "Belo Horizonte",
-    "state": "MG",
-    "complement": "APTO",
-    "country": "BR"
-  }
+  correlationID: 'some id',
+  name: 'Dan',
+  email: 'email0@example.com',
+  phone: '5511999999999',
+  address: {
+    zipcode: '30421322',
+    street: 'Street',
+    number: '100',
+    neighborhood: 'Neighborhood',
+    city: 'Belo Horizonte',
+    state: 'MG',
+    complement: 'APTO',
+    country: 'BR',
+  },
 });
 ```
+
 ## Partners
 
 Call the `partner` method on your API client to get the partners resource.
 
-[Endpoint documentation for more details](https://developers.woovi.com/api#tag/partner-(request-access)).
+[Endpoint documentation for more details](<https://developers.woovi.com/api#tag/partner-(request-access)>).
 
 ### Get a partner pre-registration
 
 Call the `getPreRegistration` method on the partners resource passing a taxID:
 
-[Endpoint documentation for more details](https://developers.woovi.com/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1company~1%7BtaxID%7D/get) .
+[Endpoint documentation for more details](<https://developers.woovi.com/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1company~1%7BtaxID%7D/get>) .
 
 ```js
-const response = await woovi.partner.getPreRegistration({taxID: "some-tax-id"});
+const response = await woovi.partner.getPreRegistration({
+  taxID: 'some-tax-id',
+});
 ```
 
 ### Get all pre-registrations
 
 Get partner pre-registrations using the `list` method in the partners resource:
 
-[Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1company/get).
+[Endpoint documentation for more details](<https://developers.openpix.com.br/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1company/get>).
 
 ```js
-const response = await woovi.partner.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.partner.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a partner
 
 Create a partner using the `create` method in the partners resource:
 
-[Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1company/post).
+[Endpoint documentation for more details](<https://developers.openpix.com.br/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1company/post>).
 
-```js 
+```js
 const response = await woovi.partner.create({
-  "preRegistration": {
-    "name": "Example LLC",
-    "taxID": {
-      "taxID": "11111111111111",
-      "type": "BR:CNPJ"
+  preRegistration: {
+    name: 'Example LLC',
+    taxID: {
+      taxID: '11111111111111',
+      type: 'BR:CNPJ',
     },
-    "website": "examplellc.com"
+    website: 'examplellc.com',
   },
-  "user": {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "johndoe@examplellc.com",
-    "phone": "+5511912345678"
-  }
+  user: {
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'johndoe@examplellc.com',
+    phone: '+5511912345678',
+  },
 });
 ```
 
@@ -302,18 +309,18 @@ const response = await woovi.partner.create({
 
 Para criar uma aplicação, use o método `createApplication` no recurso de parceiros.
 
-[Documentação do endpoint para mais detalhes](https://developers.openpix.com.br/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1application/post).
+[Documentação do endpoint para mais detalhes](<https://developers.openpix.com.br/api#tag/partner-(request-access)/paths/~1api~1v1~1partner~1application/post>).
 
-```js 
+```js
 const response = await woovi.partner.createApplication({
-  "application": {
-    "name": "MyAPIAccess",
-    "type": "API"
+  application: {
+    name: 'MyAPIAccess',
+    type: 'API',
   },
-  "taxID": {
-    "taxID": "65914571000187",
-    "type": "BR:CNPJ"
-  }
+  taxID: {
+    taxID: '65914571000187',
+    type: 'BR:CNPJ',
+  },
 });
 ```
 
@@ -321,54 +328,57 @@ const response = await woovi.partner.createApplication({
 
 Call the `payment` method on your API client to get the payments feature.
 
-[Endpoint documentation for more details](https://developers.woovi.com/api#tag/partner-(request-access)/).
+[Endpoint documentation for more details](<https://developers.woovi.com/api#tag/partner-(request-access)/>).
 
 ### Approve a payment
 
 Call the `approve` method in the payments resource by passing a correlationID:
 
-[Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment~1approve/post).
+[Endpoint documentation for more details](<https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment~1approve/post>).
 
 ```js
-const response = await woovi.payment.approve({correlationID: "some-correlation-id"});
+const response = await woovi.payment.approve({
+  correlationID: 'some-correlation-id',
+});
 ```
 
 ### Get a payment
 
 Get a payment using the `get` method in the payments feature:
 
-[Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment~1%7Bid%7D/get) .
+[Endpoint documentation for more details](<https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment~1%7Bid%7D/get>) .
 
 ```js
-const response = await woovi.payment.get({id: "some-id"});
+const response = await woovi.payment.get({ id: 'some-id' });
 ```
 
 ### Get a list of payments
 
 Get a list of payments using the `list` method in the payments feature.
 
-[Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment/get).
+[Endpoint documentation for more details](<https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment/get>).
 
 ```js
-const response = await woovi.payment.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.payment.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a payment request
 
 To create a payment request, use the `create` method in the payment resource.
 
-[Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment/post).
+[Endpoint documentation for more details](<https://developers.openpix.com.br/api#tag/payment-(request-access)/paths/~1api~1v1~1payment/post>).
 
-```js 
+```js
 const response = await woovi.payment.create({
-  "value": 100,
-  "destinationAlias": "c4249323-b4ca-43f2-8139-8232aab09b93",
-  "destinationAliasType": "RANDOM",
-  "comment": "payment comment",
-  "correlationID": "payment1",
-  "sourceAccountId": "my-source-account-id"
+  value: 100,
+  destinationAlias: 'c4249323-b4ca-43f2-8139-8232aab09b93',
+  destinationAliasType: 'RANDOM',
+  comment: 'payment comment',
+  correlationID: 'payment1',
+  sourceAccountId: 'my-source-account-id',
 });
 ```
+
 ## Get a Qr Code
 
 Call the `pixQrCode` method on your API client to get the qr code resource.
@@ -382,7 +392,7 @@ Get a qr code using the `get` method in the qr code resource:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/pixQrCode/paths/~1api~1v1~1qrcode-static~1%7Bid%7D/get).
 
 ```js
-const response = await woovi.pixQrCode.get({id: "some-id"});
+const response = await woovi.pixQrCode.get({ id: 'some-id' });
 ```
 
 ### Get a list of payments
@@ -392,7 +402,7 @@ Get a list of qr codes using the `list` method in the qr code resource.
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/pixQrCode/paths/~1api~1v1~1qrcode-static/get).
 
 ```js
-const response = await woovi.pixQrCode.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.pixQrCode.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a static qr code.
@@ -401,12 +411,12 @@ To create a static qr code, use the `create` method in the qr code resource.
 
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/pixQrCode/paths/~1api~1v1~1qrcode-static/post).
 
-```js 
+```js
 const response = await woovi.pixQrCode.create({
-  "name": "my-qr-code",
-  "correlationID": "9134e286-6f71-427a-bf00-241681624586",
-  "value": 100,
-  "comment": "good"
+  name: 'my-qr-code',
+  correlationID: '9134e286-6f71-427a-bf00-241681624586',
+  value: 100,
+  comment: 'good',
 });
 ```
 
@@ -423,7 +433,7 @@ Get a refund using the `get` method in the refund resource:
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/refund/paths/~1api~1v1~1refund~1%7Bid%7D/get).
 
 ```js
-const response = await woovi.refund.get({id: "some-id"});
+const response = await woovi.refund.get({ id: 'some-id' });
 ```
 
 ### Get a list of extortionists
@@ -433,7 +443,7 @@ Get a list of refunds using the `list` method in the refund resource.
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/refund/paths/~1api~1v1~1refund/get).
 
 ```js
-const response = await woovi.refund.list({limit: 10, skip: 0}); //the pagination object is optional
+const response = await woovi.refund.list({ limit: 10, skip: 0 }); //the pagination object is optional
 ```
 
 ### Create a new extortion
@@ -442,14 +452,15 @@ To create a return, use the `create` method on the return resource.
 
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/refund/paths/~1api~1v1~1refund/post).
 
-```js 
+```js
 const response = await woovi.refund.create({
-  "transactionEndToEndId": "9134e286-6f71-427a-bf00-241681624586",
-  "correlationID": "9134e286-6f71-427a-bf00-241681624586",
-  "value": 100,
-  "comment": "Comentário do reembolso"
+  transactionEndToEndId: '9134e286-6f71-427a-bf00-241681624586',
+  correlationID: '9134e286-6f71-427a-bf00-241681624586',
+  value: 100,
+  comment: 'Comentário do reembolso',
 });
 ```
+
 ## Subscription
 
 Call the `subscription` method on your API client to get the subscription resource.
@@ -463,7 +474,7 @@ Get a Subscription from exbacks using the `get` method in the Subscription resou
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/subscription/paths/~1api~1v1~1subscriptions~1%7Bid%7D/get).
 
 ```js
-const response = await woovi.subscription.get({id: "some-id"});
+const response = await woovi.subscription.get({ id: 'some-id' });
 ```
 
 ### Create a Subscription
@@ -472,19 +483,18 @@ To create a Subscription, use the `create` method on the Subscription resource.
 
 [Endpoint documentation for more details](https://developers.openpix.com.br/api#tag/subscription/paths/~1api~1v1~1subscriptions/post).
 
-```js 
+```js
 const response = await woovi.subscriptions.create({
-  "value": 100,
-  "customer": {
-    "name": "Dan",
-    "taxID": "31324227036",
-    "email": "email0@example.com",
-    "phone": "5511999999999"
+  value: 100,
+  customer: {
+    name: 'Dan',
+    taxID: '31324227036',
+    email: 'email0@example.com',
+    phone: '5511999999999',
   },
-  "dayGenerateCharge": 15
+  dayGenerateCharge: 15,
 });
 ```
-
 
 ## Transactions
 

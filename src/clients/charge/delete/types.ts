@@ -1,7 +1,7 @@
 export type DeletePayload = {
-	id: string;
+  id: string;
 };
 
 export type DeleteResponse = {
-	status: string;
+  status: string;
 };

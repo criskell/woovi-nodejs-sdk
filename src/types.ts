@@ -1,17 +1,17 @@
 export type ApiConfig = {
-	appId: string;
+  appId: string;
 };
 
 export interface ApiResponse {
-	api_response: ResponseFields;
+  api_response: ResponseFields;
 }
 
 export type ResponseFields = {
-	status: number;
-	headers: [string, string[]];
+  status: number;
+  headers: [string, string[]];
 };
 
 export type Pagination = {
-	skip: number;
-	limit: number;
+  skip: number;
+  limit: number;
 };

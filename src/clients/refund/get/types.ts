@@ -1,9 +1,9 @@
 import type { Refund } from '../commonTypes';
 
 export type GetPayload = {
-	id: string;
+  id: string;
 };
 
 export type GetResponse = {
-	pixTransactionRefund: Refund;
+  pixTransactionRefund: Refund;
 };

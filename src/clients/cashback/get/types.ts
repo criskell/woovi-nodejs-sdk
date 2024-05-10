@@ -1,8 +1,8 @@
 export type GetPayload = {
-	taxID: string;
+  taxID: string;
 };
 
 export type GetResponse = {
-	balance: number;
-	status: string;
+  balance: number;
+  status: string;
 };

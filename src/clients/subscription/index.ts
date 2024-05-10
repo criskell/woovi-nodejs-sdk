@@ -3,8 +3,8 @@ import create from './create';
 import get from './get';
 
 export default (restClient: RestClientApi) => {
-	return {
-		get: get(restClient),
-		create: create(restClient),
-	};
+  return {
+    get: get(restClient),
+    create: create(restClient),
+  };
 };

@@ -1,5 +1,5 @@
 export type Transfer = {
-	value: number;
-	time: string;
-	correlationID: string;
+  value: number;
+  time: string;
+  correlationID: string;
 };

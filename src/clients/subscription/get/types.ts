@@ -1,9 +1,9 @@
 import type { Subscription } from '../commonTypes';
 
 export type GetPayload = {
-	id: string;
+  id: string;
 };
 
 export type GetResponse = {
-	subscription: Subscription;
+  subscription: Subscription;
 };

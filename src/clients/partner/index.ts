@@ -5,10 +5,10 @@ import get from './get-pre-registration';
 import list from './list-pre-registration';
 
 export default (restClient: RestClientApi) => {
-	return {
-		get: get(restClient),
-		createPreRegistration: create_pre_registration(restClient),
-		createApplication: create_application(restClient),
-		listPreRegistration: list(restClient),
-	};
+  return {
+    get: get(restClient),
+    createPreRegistration: create_pre_registration(restClient),
+    createApplication: create_application(restClient),
+    listPreRegistration: list(restClient),
+  };
 };

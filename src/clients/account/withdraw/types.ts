@@ -1,16 +1,16 @@
 import type { Account } from '../commonTypes';
 
 export type WithdrawPayload = {
-	accountId: string;
-	value: number;
+  accountId: string;
+  value: number;
 };
 
 export type WithdrawTransaction = {
-	endToEndId: string;
-	value: number;
+  endToEndId: string;
+  value: number;
 };
 
 export type WithdrawResponse = {
-	account: Account;
-	transaction: WithdrawTransaction;
+  account: Account;
+  transaction: WithdrawTransaction;
 };

@@ -1,9 +1,9 @@
 import type { Charge } from '../commonTypes';
 
 export type GetPayload = {
-	id: string;
+  id: string;
 };
 
 export type GetResponse = {
-	charge: Charge;
+  charge: Charge;
 };

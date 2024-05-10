@@ -4,9 +4,9 @@ import list from './list';
 import withdraw from './withdraw';
 
 export default (restClient: RestClientApi) => {
-	return {
-		get: get(restClient),
-		list: list(restClient),
-		withdraw: withdraw(restClient),
-	};
+  return {
+    get: get(restClient),
+    list: list(restClient),
+    withdraw: withdraw(restClient),
+  };
 };

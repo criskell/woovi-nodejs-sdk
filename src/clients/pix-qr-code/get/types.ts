@@ -1,9 +1,9 @@
 import type { PixQRCode } from '../commonTypes';
 
 export type GetPayload = {
-	id: string;
+  id: string;
 };
 
 export type GetResponse = {
-	pixQrCode: PixQRCode;
+  pixQrCode: PixQRCode;
 };

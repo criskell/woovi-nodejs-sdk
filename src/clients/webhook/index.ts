@@ -5,10 +5,10 @@ import handler from './handler';
 import list from './list';
 
 export default (restClient: RestClientApi) => {
-	return {
-		create: create(restClient),
-		delete: _delete(restClient),
-		handler: handler,
-		list: list(restClient),
-	};
+  return {
+    create: create(restClient),
+    delete: _delete(restClient),
+    handler: handler,
+    list: list(restClient),
+  };
 };

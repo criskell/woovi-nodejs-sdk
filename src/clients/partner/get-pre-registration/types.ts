@@ -1,9 +1,9 @@
 import type { PreRegistration } from '../commonTypes';
 
 export type GetPayload = {
-	taxID: string;
+  taxID: string;
 };
 
 export type GetResponse = {
-	preRegistration: PreRegistration;
+  preRegistration: PreRegistration;
 };
